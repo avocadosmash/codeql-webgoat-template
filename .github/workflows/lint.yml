@@ -7,10 +7,11 @@
 name: Lint Code
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    paths-ignore:
+      - '.txt'
+      - 'LICENSE'
+      - 'docs/**'
 jobs:
   run-lint:
     runs-on: ubuntu-latest
